@@ -38,6 +38,6 @@ Listener 2: CoinSound.cs - It plays a sound when the score changes.
 
 ## Help I used
 
-ChatGPT- Helped with syntax errors and troubleshooting for when I couldn't find out what the problem was.
+Copilot- It helped with syntax errors and troubleshooting for when I couldn't find out what the problem was. It also helped me figure out what unity wanted me to type to get my methods working.
 https://youtu.be/ThKWyHW4K5Y?si=mna279A7dXCaCCYI A video that helped me understand how to make the player collect coins.
 https://youtu.be/NaJODwP_L0s?si=rxav_5B4Zkk32kAD This helped me understand how to set up my Observer patterns.
