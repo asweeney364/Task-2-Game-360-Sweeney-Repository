@@ -11,14 +11,15 @@ public class CoinSpawner : MonoBehaviour
 
     private void Update()
     {
-        // Spawn a coin when it is time
+        // spawns a coins in
         if (Time.time >= nextSpawnTime)
         {
             SpawnCoin();
 
-            // Set the time for the next coin
+            // sets the time for the next coin
             nextSpawnTime = Time.time + spawnRate;
         }
+            // makes the coins spawn in faster as the points go up
         if (GameManager.Instance.score > 400 && GameManager.Instance.score < 900)
             spawnRate = 1.5f;
         if (GameManager.Instance.score > 900 && GameManager.Instance.score < 1400)
@@ -29,14 +30,12 @@ public class CoinSpawner : MonoBehaviour
 
     private void SpawnCoin()
     {
-        // Check that a coin prefab and spawn points are assigned
-        if (coinPrefab && spawnPoints.Length > 0)
-        {
+        
             // Choose a random spawn point
-            int randomIndex = Random.Range(0, spawnPoints.Length);
+     int randomIndex = Random.Range(0, spawnPoints.Length);
 
             // Create the coin at the chosen spawn point
-            Instantiate(coinPrefab, spawnPoints[randomIndex].position, Quaternion.identity);
-        }
+     Instantiate(coinPrefab, spawnPoints[randomIndex].position, Quaternion.identity);
+        
     }
 }

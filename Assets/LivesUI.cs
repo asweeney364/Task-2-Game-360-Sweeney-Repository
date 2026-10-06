@@ -8,22 +8,22 @@ public class LivesUI : MonoBehaviour
 
     private void OnEnable()
     {
-        // Subscribe to the lives event
+        // subscribes to the lives event
         gameManager.LivesChanged += UpdateLives;
 
-        // Display the starting lives
+        // displays the lives at the start
         UpdateLives(gameManager.lives);
     }
 
     private void OnDisable()
     {
-        // Unsubscribe from the lives event
+        // unsubscribes from the lives event
         gameManager.LivesChanged -= UpdateLives;
     }
 
     private void UpdateLives(int lives)
     {
-        // Update the text when lives change
+        // updates the text when lives change
         livesText.text = "Lives: " + lives;
     }
 }

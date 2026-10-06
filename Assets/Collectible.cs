@@ -8,12 +8,12 @@ public class Collectible : MonoBehaviour
     private void Update()
     {
         
-        // Count down until the coin expires
+        // counts down so the coin disappears off screen
         lifetime -= Time.deltaTime;
 
         if (lifetime <= 0f)
         {
-            // Lose a life and remove the coin
+            // makes you lose a life and removes the coin
             GameManager.Instance.LoseLife();
             Destroy(gameObject);
         }
@@ -23,7 +23,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Add points and remove the coin
+            // add points and removes the coin
             GameManager.Instance.CoinPickedUp(value);
             Destroy(gameObject);
         }

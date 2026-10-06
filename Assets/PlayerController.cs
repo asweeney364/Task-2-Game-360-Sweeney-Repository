@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        // Get the player's Rigidbody2D component
+        // gets the player's rigidbody
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -20,10 +20,10 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        // Read keyboard input: A/D or left/right arrows
+        // reads the inputs for ad or left and right arrows
         float horizontal = Input.GetAxisRaw("Horizontal");
 
-        // Set horizontal speed (X) and zero vertical speed (Y)
+        // sets horizontal speed to a value and sets vertical speed to 0
         rb.linearVelocity = new Vector2(moveSpeed * horizontal, 0f);
     }
 }
